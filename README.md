@@ -14,7 +14,12 @@ Grove Alcohol Sensor
 Grove - Alcohol Sensor is built with MQ303A semiconductor alcohol sensor. It has good sensitivity and fast response to alcohol. It is suitable for making Breathalyzer. This Grove implements all the necessary circuitry for MQ303A like power conditioning and heater power supply. This sensor outputs a voltage inversely proportional to the alcohol concentration in air.
 
 
-
+Legato Application
+------------------
+There are 3 legato application:
+* AlcoholSensorService: provide api for reading alcohol sensor.
+* AlcoholSensorToDatahub: push alcohol sensor value to datahub  in priod time.
+* AlcoholSensorDisplay: Objever data from data hub and display the alcohol sensor value.
 
 
 
