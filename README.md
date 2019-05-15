@@ -2,11 +2,19 @@
 
 This project demonstrates how to integrate Grove Alcohol Sensor With MangoH and Grove IoT Exapansion Card.
 
+
+Container Tracking
+------------------
+Simulates tracking of a shipping container using a mangOH Green.  The
+demonstration makes use of a SensorTag bluetooth device which integrates a
+number of sensors.  The demo supports alarm generation and pushing logged data
+
+
 ## Prerequisites
 
-	1. A mangOH Red board.
-	1. A Grove IoT Expansion card.
-	1. Grove Alcohol sensor: See detail of sensor on wiki page: http://wiki.seeedstudio.com/Grove-Alcohol_Sensor/ 
+* A mangOH Red board.
+* A Grove IoT Expansion card.
+* Grove Alcohol sensor: See detail of sensor on wiki page: http://wiki.seeedstudio.com/Grove-Alcohol_Sensor/ 
 
 ## Setup
 1. Clone this repository with the `--recursive` option so that the submodules are retrieved as well.
