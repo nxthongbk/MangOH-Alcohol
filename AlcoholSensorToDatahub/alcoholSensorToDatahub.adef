@@ -1,0 +1,18 @@
+executables:
+{
+	alcoholSensorToDatahub = ( AlcoholSensorToDatahubComponent )
+}
+
+processes:
+{
+	run:
+	{
+		( alcoholSensorToDatahub )
+	}
+}
+
+bindings:
+{
+	alcoholSensorToDatahub.AlcoholSensorToDatahubComponent.io -> dataHub.io
+	alcoholSensorToDatahub.AlcoholSensorToDatahubComponent.ma_alcoholSensor -> alcoholSensor.ma_alcoholSensor
+}

@@ -1,0 +1,18 @@
+executables:
+{
+	alcoholSensorDisplay = ( AlcoholSensorDisplayComponent )
+}
+
+processes:
+{
+	run:
+	{
+		( alcoholSensorDisplay )
+	}
+}
+
+bindings:
+{
+	alcoholSensorDisplay.AlcoholSensorDisplayComponent.io -> dataHub.io
+	alcoholSensorDisplay.AlcoholSensorDisplayComponent.admin -> dataHub.admin
+}

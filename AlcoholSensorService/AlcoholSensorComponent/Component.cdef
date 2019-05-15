@@ -1,0 +1,20 @@
+sources:
+{
+	alcoholSensor.c
+}
+
+requires:
+{
+	api:
+	{
+		modemServices/le_adc.api
+	}
+}
+
+provides:
+{
+	api:
+	{
+		ma_alcoholSensor.api
+	}
+}
