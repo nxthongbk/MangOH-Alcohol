@@ -18,7 +18,7 @@ Legato Application
 ------------------
 There are 3 legato applications:
 * ```AlcoholSensorService```: provides api for reading alcohol sensor.
-* ```AlcoholSensorToDatahub```: push alcohol sensor value to datahub in period time.
+* ```AlcoholSensorToDatahub```: push alcohol sensor value in period time to datahub.
 * ```AlcoholSensorDisplay```: register for notification of value updates, create observation (filter) for alcohol sensor and display the alcohol sensor value.
 
 
