@@ -36,5 +36,5 @@ There are 3 legato applications:
 1. Run ```instapp alcoholSensor.wp85.update 192.168.2.2``` to install the app.
 1. Build the AlcoholSensorToDatahub app by running ```mkapp -t wp85 AlcoholSensorToDatahub.adef``` in AlcoholSensorToDatahub directory.
 1. Run ```instapp AlcoholSensorToDatahub.wp85.update 192.168.2.2``` to install the app.
-1. Build the AlcoholSensorToDatahub app by running ```mkapp -t wp85 AlcoholSensorDisplay.adef``` in AlcoholSensorDisplay directory.
+1. Build the AlcoholSensorDisplay app by running ```mkapp -t wp85 AlcoholSensorDisplay.adef``` in AlcoholSensorDisplay directory.
 1. Run ```instapp AlcoholSensorDisplay.wp85.update 192.168.2.2``` to install the app.
