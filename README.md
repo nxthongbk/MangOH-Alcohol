@@ -16,7 +16,7 @@ Grove - Alcohol Sensor is built with MQ303A semiconductor alcohol sensor. It has
 
 Legato Application
 ------------------
-There are 3 legato application:
+There are 3 legato applications:
 * ```AlcoholSensorService```: Provide api for reading alcohol sensor.
 * ```AlcoholSensorToDatahub```: Push alcohol sensor value to datahub in period time.
 * ```AlcoholSensorDisplay```: Register for notification of value updates, Create observation (filter) for alcohol sensor and display the alcohol sensor value.
