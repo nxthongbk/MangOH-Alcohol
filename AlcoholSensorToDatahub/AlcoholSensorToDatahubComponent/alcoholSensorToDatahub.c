@@ -154,7 +154,7 @@ COMPONENT_INIT
 
 	// Create a repeating timer that will call TimerExpired() each time it expires.
 	// Note: we'll start the timer when we receive our configuration setting.
-	Timer = le_timer_Create("airTimer");
+	Timer = le_timer_Create("AlcoholTimer");
 	le_timer_SetRepeat(Timer, 0);
 	le_timer_SetHandler(Timer, TimerExpired);
 }

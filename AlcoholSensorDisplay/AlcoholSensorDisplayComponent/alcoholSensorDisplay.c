@@ -13,7 +13,7 @@
 
 //--------------------------------------------------------------------------------------------------
 /**
- * Call-back function called when an update is received from the Data Hub for the latitude value.
+ * Call-back function called when an update is received from the Data Hub for the alcohol sensor value.
  */
 //--------------------------------------------------------------------------------------------------
 static void AlcoholSensorUpdateHandler
@@ -29,17 +29,17 @@ static void AlcoholSensorUpdateHandler
 
 //--------------------------------------------------------------------------------------------------
 /**
- * Call-back function called when an update is received from the Data Hub for the led matrix value.
+ * Call-back function called when an update is received from the Data Hub for the alcohol sensor value.
  */
 //--------------------------------------------------------------------------------------------------
 static void AlcoholSensorObservationUpdateHandler
 (
 	double timestamp,	///< time stamp
-	double value,		///< air sensor value,
+	double value,		///< alcohol sensor value,
 	void* contextPtr	///< not used 
 )
 {
-	LE_INFO("Observed filtered air sensor = %lf (timestamped %lf)", value, timestamp);	
+	LE_INFO("Observed filtered alcohol sensor = %lf (timestamped %lf)", value, timestamp);	
 }
 
 
