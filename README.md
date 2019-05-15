@@ -1,6 +1,6 @@
-# Integrate Grove Alcohol Sensor With MangoH and Grove IoT Exapansion Card
+# Integrate Grove Alcohol Sensor with MangoH and Grove IoT Exapansion Card
 
-This project demonstrates how to integrate Grove Alcohol Sensor With MangoH and Grove IoT Exapansion Card.
+This project demonstrates how to integrate Grove Alcohol Sensor with MangoH and Grove IoT Exapansion Card.
 
 
 ## Prerequisites
