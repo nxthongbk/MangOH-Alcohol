@@ -1,4 +1,4 @@
-# Integrate LittlevGL into Legato app
+# Integrate Grove Alcohol Sensor With MangoH and Grove IoT Exapansion Card
 
 This project demonstrates how to integrate LittlevlGL into a Legato app. The necessary LittlevGL
 dependencies are referenced by this repository as git submodules.
