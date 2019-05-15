@@ -16,10 +16,10 @@ Grove - Alcohol Sensor is built with MQ303A semiconductor alcohol sensor. It has
 
 Legato Application
 ------------------
-There are 3 legato application:
-* ```AlcoholSensorService```: Provide api for reading alcohol sensor.
-* ```AlcoholSensorToDatahub```: Push alcohol sensor value to datahub in period time.
-* ```AlcoholSensorDisplay```: Register for notification of value updates, Create observation (filter) for alcohol sensor and display the alcohol sensor value.
+There are 3 legato applications:
+* ```AlcoholSensorService```: provides api for reading alcohol sensor.
+* ```AlcoholSensorToDatahub```: push alcohol sensor value in period time to datahub.
+* ```AlcoholSensorDisplay```: register for notification of value updates, create observation (filter) for alcohol sensor and display the alcohol sensor value.
 
 
 
@@ -36,5 +36,5 @@ There are 3 legato application:
 1. Run ```instapp alcoholSensor.wp85.update 192.168.2.2``` to install the app.
 1. Build the AlcoholSensorToDatahub app by running ```mkapp -t wp85 AlcoholSensorToDatahub.adef``` in AlcoholSensorToDatahub directory.
 1. Run ```instapp AlcoholSensorToDatahub.wp85.update 192.168.2.2``` to install the app.
-1. Build the AlcoholSensorToDatahub app by running ```mkapp -t wp85 AlcoholSensorDisplay.adef``` in AlcoholSensorDisplay directory.
+1. Build the AlcoholSensorDisplay app by running ```mkapp -t wp85 AlcoholSensorDisplay.adef``` in AlcoholSensorDisplay directory.
 1. Run ```instapp AlcoholSensorDisplay.wp85.update 192.168.2.2``` to install the app.
