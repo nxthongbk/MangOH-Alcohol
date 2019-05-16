@@ -1,0 +1,175 @@
+# Build script for application 'alcoholSensor'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir =/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85
+
+cFlags = -I /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85 -I/home/nxthong/MangOH/workspace/legato/interfaces -I/home/nxthong/MangOH/workspace/legato/framework/include -I/home/nxthong/MangOH/workspace/legato/build/wp85/framework/include -I/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService
+
+cxxFlags = -I /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85 -I/home/nxthong/MangOH/workspace/legato/interfaces -I/home/nxthong/MangOH/workspace/legato/framework/include -I/home/nxthong/MangOH/workspace/legato/build/wp85/framework/include -I/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService
+
+ldFlags =
+
+target = wp85
+
+ifgenFlags =  --import-dir /home/nxthong/MangOH/workspace/legato/interfaces --import-dir /home/nxthong/MangOH/workspace/legato/framework/include --import-dir /home/nxthong/MangOH/workspace/legato/build/wp85/framework/include --import-dir /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -shared -o $out $in $ldFlags
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -shared -o $out $in $ldFlags
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -fPIE -pie -o $out $in $ldFlags
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi -fPIE -pie -o $out $in $ldFlags
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi $cFlags" $
+            CXXFLAGS="--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi $cxxFlags" $
+            LDFLAGS="--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi $ldFlags" $
+            CPPFLAGS="--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi $cppFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi:/opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin:/opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/bin:/opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/sbin:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkapp --dont-run-ninja "-t" "wp85" "alcoholSensor.adef"
+
+rule BundleFile
+  description = Bundling file
+  command = legato-install -m $modeFlags $in $out
+
+rule MakeAppInfoProperties
+  description = Creating info.properties
+  command = rm -f $out && $
+            md5=$$( ( cd $workingDir/staging && $
+                      find -P -print0 |LC_ALL=C sort -z && $
+                      find -P -type f -print0 |LC_ALL=C sort -z |xargs -0 md5sum && $
+                      find -P -type l -print0 |LC_ALL=C sort -z |xargs -0 -r -n 1 readlink $
+                    ) | md5sum) && $
+            md5=$${md5%% *} && $
+            ( echo "app.name=$name" && $
+              echo "app.md5=$$md5" && $
+              echo "app.version=$version" && $
+              echo "legato.version=`cat $$LEGATO_ROOT/version`" $
+            ) > $out
+
+rule PackApp
+  description = Packaging app
+  command = $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir/staging -exec touch --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/staging && find . -print0 | LC_ALL=C sort -z |tar --no-recursion --null -T - -cjf - ) > $workingDir/$name.$target && $
+            tarballSize=`stat -c '%s' $workingDir/$name.$target` && $
+            md5=`grep '^app.md5=' $in | sed 's/^app.md5=//'` && $
+            ( printf '{\n' && $
+              printf '"command":"updateApp",\n' && $
+              printf '"name":"$name",\n' && $
+              printf '"version":"$version",\n' && $
+              printf '"md5":"%s",\n' "$$md5" && $
+              printf '"size":%s\n' "$$tarballSize" && $
+              printf '}' && $
+              cat $workingDir/$name.$target $
+            ) > $out
+
+rule BinPackApp
+  description = Packaging app for distribution.
+  command = cp -r $stagingDir/* $workingDir/ && $
+            rm $workingDir/info.properties $workingDir/root.cfg && $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir -exec touch  --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/ && find . -print0 |LC_ALL=C sort -z  |tar --no-recursion --null -T - -cjf - ) > $out
+
+build $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c.o: CompileC $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c | $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_messages.h $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_interface.h $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_messages.h: GenInterfaceCode /home/nxthong/MangOH/workspace/legato/interfaces/modemServices/le_adc.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_adc $ifgenFlags
+  outputDir = $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client
+
+build $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.o: CompileC $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.c | $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_messages.h $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.h
+  cFlags = $cFlags
+
+build $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.c $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.h $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_messages.h: GenInterfaceCode /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/ma_alcoholSensor.api |
+  ifgenFlags = --gen-server --gen-server-interface --gen-local --name-prefix ma_alcoholSensor $ifgenFlags
+  outputDir = $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server
+
+build /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib/libComponent_AlcoholSensorComponent.so: LinkCLib $builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/obj/204aec5a824cf7131dce816433496c0c.o $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c.o $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.o $builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/obj/_componentMain.c.o | /home/nxthong/MangOH/workspace/legato/build/wp85/framework/lib/liblegato.so
+  ldFlags =  -L/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/obj/204aec5a824cf7131dce816433496c0c.o: CompileC /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/AlcoholSensorComponent/alcoholSensor.c || $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_server.h $builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server/ma_alcoholSensor_messages.h $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_interface.h $builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_messages.h 
+  cFlags = $cFlags -I$builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/src -I$builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server -I$builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client -DLE_COMPONENT_NAME=AlcoholSensorComponent -DLE_LOG_SESSION=AlcoholSensorComponent_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=AlcoholSensorComponent_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _AlcoholSensorComponent_COMPONENT_INIT()"
+
+build $builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/obj/_componentMain.c.o: CompileC $builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/12beabfd22f1e2167dcbaefb86f4cd51/src -I$builddir/api/c7f84fc8e12b11b35dd0341bbf897cba/server -I$builddir/api/77a8df6e6afaa95bfef32592c527dc2a/client -DLE_COMPONENT_NAME=AlcoholSensorComponent -DLE_LOG_SESSION=AlcoholSensorComponent_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=AlcoholSensorComponent_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _AlcoholSensorComponent_COMPONENT_INIT()"
+
+build $builddir/app/alcoholSensor/obj/alcoholSensor/_main.c.o: CompileC /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/app/alcoholSensor/src/alcoholSensor/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=alcoholSensor_exe -DLE_LOG_SESSION=alcoholSensor_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=alcoholSensor_exe_LogLevelFilterPtr 
+
+build $builddir/app/alcoholSensor/obj/alcoholSensor/alcoholSensor: LinkCExe $builddir/app/alcoholSensor/obj/alcoholSensor/_main.c.o | /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib/libComponent_AlcoholSensorComponent.so /home/nxthong/MangOH/workspace/legato/build/wp85/framework/lib/liblegato.so /home/nxthong/MangOH/workspace/legato/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -L/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib "-L/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib" -lComponent_AlcoholSensorComponent "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/alcoholSensor/staging/read-only/lib/libComponent_AlcoholSensorComponent.so : BundleFile /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/staging/read-only/lib/libComponent_AlcoholSensorComponent.so
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/alcoholSensor/staging/read-only/bin/alcoholSensor : BundleFile $builddir/app/alcoholSensor/obj/alcoholSensor/alcoholSensor
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/alcoholSensor/staging/info.properties : MakeAppInfoProperties | $builddir/app/alcoholSensor/staging/read-only/lib/libComponent_AlcoholSensorComponent.so $builddir/app/alcoholSensor/staging/read-only/bin/alcoholSensor $builddir/app/alcoholSensor/staging/root.cfg
+  name = alcoholSensor
+  version = 1.0.0
+  workingDir = $builddir/app/alcoholSensor
+
+build alcoholSensor.$target.update: PackApp $builddir/app/alcoholSensor/staging/info.properties
+  name = alcoholSensor
+  adefPath = /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/alcoholSensor.adef
+  version = 1.0.0
+  workingDir = $builddir/app/alcoholSensor
+
+build /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/build.ninja: RegenNinjaScript | /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/AlcoholSensorComponent/Component.cdef /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/ma_alcoholSensor.api /home/nxthong/MangOH/workspace/legato/interfaces/modemServices/le_adc.api
+

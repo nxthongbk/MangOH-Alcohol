@@ -15,12 +15,15 @@ le_result_t ma_alcoholSensor_Read(double *alcohol)
  		return LE_FAULT;
 	}
 
-	sensor_volt = valueMv/1024*5.0;
-	RS_air = sensor_volt/(5.0-sensor_volt); // omit *R16
+	LE_DEBUG("alcohol %d ppm", valueMv);
+
+	sensor_volt = valueMv/1000;
+	RS_air = sensor_volt/(1.8-sensor_volt); // omit *R16
+
+	LE_DEBUG("Read RS_air %f ppm", RS_air);
 
 	*alcohol = RS_air;
 	
-	LE_DEBUG("Read alcohol %f C", *alcohol);
 	return LE_OK;
 }
 

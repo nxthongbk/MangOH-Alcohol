@@ -2,9 +2,9 @@
 #include "interfaces.h"
 
 
-#define ALCOHOL_SENSOR_NAME "alcohol/industrial_pm1_0/value"
+#define ALCOHOL_SENSOR_NAME "alcohol/rs_air/value"
 
-#define ALCOHOL_SENSOR_DATA "/app/alcoholSensorToDatahub/alcohol/industrial_pm1_0/value"
+#define ALCOHOL_SENSOR_DATA "/app/alcoholSensorToDatahub/alcohol/rs_air/value"
 
 #define ALCOHOL_SENSOR_OBS "alcoholSensorOffLimits"
 
@@ -58,7 +58,7 @@ COMPONENT_INIT
 	result = admin_SetSource("/app/alcoholSensorDisplay/" ALCOHOL_SENSOR_NAME, ALCOHOL_SENSOR_DATA);
 	LE_ASSERT(result == LE_OK);
 
-	// Create observation (filter) for air sensor. To set up the "dead band" filter,
+	// Create observation (filter) for alcohol sensor. To set up the "dead band" filter,
 	// lower limit assigned to high limit and vice versa (see admin.io doc for details).
 	admin_CreateObs(ALCOHOL_SENSOR_OBS);
 	admin_SetLowLimit(ALCOHOL_SENSOR_OBS, ALCOHOL_SENSOR_LOWER_LIMIT);

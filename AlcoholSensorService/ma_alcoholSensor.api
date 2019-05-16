@@ -23,5 +23,5 @@
 //-------------------------------------------------------------------------------------------
 FUNCTION le_result_t Read
 (
-    double reading OUT ///< Where the gas reading (kOhm) will be put if LE_OK is returned.
+	double reading OUT ///< Where the alcohol reading (ppm) will be put if LE_OK is returned.
 );
