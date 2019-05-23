@@ -15,8 +15,9 @@ le_result_t alcoholSensor_Read(double *rs)
         return LE_FAULT;
     }
 
-    LE_DEBUG("ADC value: %d ", sensorValue);
+    LE_DEBUG("ADC0 value: %d ", sensorValue);
 
+    //Convert adc value to voltage
     sensor_volt = sensorValue/1024*5.0;
 
     //Get Sensing Resistance value 

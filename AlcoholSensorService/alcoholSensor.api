@@ -16,7 +16,7 @@
 
 //--------------------------------------------------------------------------------------------------
 /**
- * Read the alcohol measurement in kiloPascals (ppm).
+ * Read the Rs value.
  *
  * @return LE_OK if successful.
  */
