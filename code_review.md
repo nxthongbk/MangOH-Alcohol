@@ -1,11 +1,11 @@
 1. Please don't check-in build artifacts: MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor or update files  		  
 ```
-[Thong] Updated
+[Thong] Removed unnecessary file
 ```
 
 2. Please provide comments in most areas, otherwise, most developers won't understand.  
 ```
-[Thong] Updated
+[Thong] Added comments 
 ```
 
 3. ma_alcoholSensor.api:  
@@ -16,7 +16,7 @@
 ```
 [Thong]
 	(a) Renamed ma_alcoholSensor.api to alcoholSensor.api.  
-	(b) Updated to times  
+	(b) Updated to kOhm  
 	(c) udpated.
 ```
 4. alcoholSensor.c:  
@@ -27,7 +27,7 @@
 [Thong]  
 (a) Updated. removed tab and replace by space  
 (b) Added comment  
-(c)  
+(c) Will check
 ```
 
 5. alcoholSensorToDatahub.c:  
@@ -50,6 +50,7 @@ I also think the datahub design assumes that Legato app code shouldn't be using 
 ```
 [Thong]  
 (a) Yes we need to control by cloud. admin interface is just use to demo how to control notification.  
+(b) alcoholSensorDisplay just show how to get data from datahub. User can display on Led display if they want. 
 ```
 I don't see why we have a component reading the ADC, returning that to another component
 who only sends to datahub - shouldn't this just be one component, i.e.
