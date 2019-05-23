@@ -1,6 +1,3 @@
-Please update your code to follow the Legato Coding standards:
-      https://docs.legato.io/latest/ccodingStdsMain.html  
-
 1. Please don't check-in build artifacts: MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor or
                                           update files  
 					  
