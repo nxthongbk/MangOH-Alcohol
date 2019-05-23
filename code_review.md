@@ -59,9 +59,9 @@ Please justify your design, but so far I see no reason for this decomposition.
 ```
 [Thong]  
 In my design there are 3 apps.  
-```AlcoholSensorService```: creates api for another app/component using. not only datahub app. It same with LedService or Battery Service that we developed before  
-```AlcoholSensorToDatahub```: Demos how to send sensor value to datahub  
-```AlcoholSensorDisplay```: Demos how to get data from datahub  
+AlcoholSensorService: creates api for another app/component using. not only datahub app. It same with LedService or Battery Service that we developed before  
+AlcoholSensorToDatahub: Demos how to send sensor value to datahub  
+AlcoholSensorDisplay: Demos how to get data from datahub  
 
 So we can update to match with Mangoh yellow.  
 ```
@@ -69,8 +69,9 @@ So we can update to match with Mangoh yellow.
 Please explain the alcohol sensor upper/lower limits - shouldn't this be just an upper
 limit only - why the lower limit? Please explain.  
 
-	[Thong]  
+```
+[Thong]  
 Just use to demo we can set range of sensor value and the notification only appear when the sensor value in range.  
-
+```
 Also, the ALCOHOL_SENSOR_UPPER_LIMIT of 100.0 - what does this mean from the inverse voltage
 point of view?  
