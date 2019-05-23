@@ -7,7 +7,7 @@ static bool IsEnabled = false;
 
 static le_timer_Ref_t Timer;
 
-#define ALCOHOL_NAME "alcohol/industrial_pm1_0/value"
+#define ALCOHOL_NAME "alcohol/rs_air/value"
 
 #define PERIOD_NAME "alcohol/period"
 #define ENABLE_NAME "alcohol/enable"
@@ -130,7 +130,7 @@ COMPONENT_INIT
     io_AddUpdateStartEndHandler(UpdateStartEndHandler, NULL);
 
     // This will be provided to the Data Hub.
-    result = io_CreateInput(ALCOHOL_NAME, IO_DATA_TYPE_NUMERIC, "times");
+    result = io_CreateInput(ALCOHOL_NAME, IO_DATA_TYPE_NUMERIC, "kohm");
     LE_ASSERT(result == LE_OK);
     
 
@@ -147,7 +147,7 @@ COMPONENT_INIT
 
     // Set the defaults: enable the sensor, set period to 1s
     io_SetBooleanDefault(ENABLE_NAME, true);
-    io_SetNumericDefault(PERIOD_NAME, 10);
+    io_SetNumericDefault(PERIOD_NAME, 1);
 
     // Register for notification of updates to our enable/disable control.
     io_AddBooleanPushHandler(ENABLE_NAME, EnableUpdateHandler, NULL);
