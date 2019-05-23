@@ -48,7 +48,7 @@ COMPONENT_INIT
     le_result_t result;
 
     // This will be received from the Data Hub.
-    result = io_CreateOutput(ALCOHOL_SENSOR_NAME, IO_DATA_TYPE_NUMERIC, "times");
+    result = io_CreateOutput(ALCOHOL_SENSOR_NAME, IO_DATA_TYPE_NUMERIC, "kOhm");
     LE_ASSERT(result == LE_OK);
 
     // Register for notification of updates to the counter value.
