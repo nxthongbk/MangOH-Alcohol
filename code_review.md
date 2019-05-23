@@ -37,8 +37,8 @@ Please review all the api routines provided by a component before coding it. Thi
       
 ```
 [Thong]  
-(a)  
-(b)  
+(a)  updated to kohm (units of Rs)
+(b)  updated to 1s
 ```
 	
 6. alcoholSensorDisplay.c  
