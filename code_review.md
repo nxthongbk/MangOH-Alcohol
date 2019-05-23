@@ -58,7 +58,7 @@ Please justify your design, but so far I see no reason for this decomposition.
 
 ```
 [Thong]  
-In my design there are 3 apps.  
+In my design there are 3 apps:  
 AlcoholSensorService: creates api for another app/component using. not only datahub app. It same with LedService or Battery Service that we developed before  
 AlcoholSensorToDatahub: Demos how to send sensor value to datahub  
 AlcoholSensorDisplay: Demos how to get data from datahub  
