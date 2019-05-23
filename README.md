@@ -46,4 +46,4 @@ The concentration of gas is calulated by ratio: ```RS_gas/RS_air```.
 - ```RS_gas``` is value of sensor returned in alcohol.
 
 <img src="https://user-images.githubusercontent.com/17214533/58239849-0e3bf700-7d74-11e9-9657-35f5769a79ab.png" width="350" alt="accessibility text"> 
-1. According to the figure, we can see that the minimum concentration we can test is 20ppm and the maximum is 10000ppm, in a other word, we can get a concentration of gas between 0.002% and 1%. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.
+According to the figure, we can see that the minimum concentration we can test is 20ppm and the maximum is 10000ppm, in a other word, we can get a concentration of gas between 0.002% and 1%. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.
