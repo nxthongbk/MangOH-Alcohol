@@ -1,8 +1,8 @@
 1. Please don't check-in build artifacts: MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor or update files  		  
-	[Thong] Updated  
+	```[Thong] Updated  
 
 2. Please provide comments in most areas, otherwise, most developers won't understand.  
-	[Thong] Updated
+	```[Thong] Updated
 
 3. ma_alcoholSensor.api:  
 	(a) You don't need "ma_alcoholSensor.api" filename, think "alcoholSensor.api"  
