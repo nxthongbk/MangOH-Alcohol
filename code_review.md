@@ -49,7 +49,7 @@ I also think the datahub design assumes that Legato app code shouldn't be using 
 	
 ```
 [Thong]  
-	(a) Yes we need to control by cloud. admin interface is just use to demo how to control notification.  
+(a) Yes we need to control by cloud. admin interface is just use to demo how to control notification.  
 ```
 I don't see why we have a component reading the ADC, returning that to another component
 who only sends to datahub - shouldn't this just be one component, i.e.
@@ -63,7 +63,7 @@ AlcoholSensorService: creates api for another app/component using. not only data
 AlcoholSensorToDatahub: Demos how to send sensor value to datahub  
 AlcoholSensorDisplay: Demos how to get data from datahub  
 
-So we can update to match with Mangoh yellow.  
+So we can update this design to match with Mangoh yellow.  
 ```
 
 Please explain the alcohol sensor upper/lower limits - shouldn't this be just an upper
