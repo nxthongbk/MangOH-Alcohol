@@ -2,27 +2,30 @@
 #include "interfaces.h"
 
 
-le_result_t alcoholSensor_Read(double *alcohol)
+le_result_t alcoholSensor_Read(double *rs)
 {
-    int32_t valueMv;
+    int32_t sensorValue;
     double sensor_volt;
-    double RS_air;
+    double RS; //Sensing Resistance: resistance of the sensor reduce when gas concentration increases
 
-    le_result_t res = le_adc_ReadValue("EXT_ADC0", &valueMv);
+    le_result_t res = le_adc_ReadValue("EXT_ADC0", &sensorValue);
 
     if (res != 0)
     {
         return LE_FAULT;
     }
 
-    LE_DEBUG("ADC value: %d mV", valueMv);
+    LE_DEBUG("ADC value: %d ", sensorValue);
 
-    sensor_volt = valueMv/1000;
-    RS_air = sensor_volt/(1.8 - sensor_volt); // omit *R16
+    sensor_volt = sensorValue/1024*5.0;
 
-    LE_DEBUG("Read RS_air: %f", RS_air);
+    //Get Sensing Resistance value 
+    //Rs is a dimensionless ratio that is useful for calculating the sensed alcohol concentration
+    RS = sensor_volt/(5.0 - sensor_volt);
 
-    *alcohol = RS_air;
+    LE_DEBUG("RS: %f", RS);
+
+    *rs = RS;
     
     return LE_OK;
 }
