@@ -9,7 +9,7 @@
 
 
 // Define IPC API interface names.
-LE_SHARED const char* _AlcoholSensorComponent_ma_alcoholSensor_ServiceInstanceName = "ma_alcoholSensor";
+LE_SHARED const char* _AlcoholSensorComponent_alcoholSensor_ServiceInstanceName = "alcoholSensor";
 LE_SHARED const char* _AlcoholSensorComponent_le_adc_ServiceInstanceName = "alcoholSensor.AlcoholSensorComponent.le_adc";
 
 // Define default component's log session variables.

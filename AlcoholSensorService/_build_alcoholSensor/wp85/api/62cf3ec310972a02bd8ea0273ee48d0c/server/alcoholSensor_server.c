@@ -9,8 +9,8 @@
  */
 
 
-#include "ma_alcoholSensor_server.h"
-#include "ma_alcoholSensor_messages.h"
+#include "alcoholSensor_server.h"
+#include "alcoholSensor_messages.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -249,7 +249,7 @@ __attribute__((unused)) static void SendMsgToClient
  * Get the server service reference
  */
 //--------------------------------------------------------------------------------------------------
-le_msg_ServiceRef_t ma_alcoholSensor_GetServiceRef
+le_msg_ServiceRef_t alcoholSensor_GetServiceRef
 (
     void
 )
@@ -263,7 +263,7 @@ le_msg_ServiceRef_t ma_alcoholSensor_GetServiceRef
  * Get the client session reference for the current message
  */
 //--------------------------------------------------------------------------------------------------
-le_msg_SessionRef_t ma_alcoholSensor_GetClientSessionRef
+le_msg_SessionRef_t alcoholSensor_GetClientSessionRef
 (
     void
 )
@@ -277,7 +277,7 @@ le_msg_SessionRef_t ma_alcoholSensor_GetClientSessionRef
  * Initialize the server and advertise the service.
  */
 //--------------------------------------------------------------------------------------------------
-void ma_alcoholSensor_AdvertiseService
+void alcoholSensor_AdvertiseService
 (
     void
 )
@@ -291,12 +291,12 @@ void ma_alcoholSensor_AdvertiseService
     le_msg_ProtocolRef_t protocolRef;
 
     // Create the server data pool
-    _ServerDataPool = le_mem_CreatePool("ma_alcoholSensor_ServerData", sizeof(_ServerData_t));
+    _ServerDataPool = le_mem_CreatePool("alcoholSensor_ServerData", sizeof(_ServerData_t));
 
     // Create safe reference map for handler references.
     // The size of the map should be based on the number of handlers defined for the server.
     // Don't expect that to be more than 2-3, so use 3 as a reasonable guess.
-    _HandlerRefMap = le_ref_CreateMap("ma_alcoholSensor_ServerHandlers", 3);
+    _HandlerRefMap = le_ref_CreateMap("alcoholSensor_ServerHandlers", 3);
 
     // Start the server side of the service
     protocolRef = le_msg_GetProtocolRef(PROTOCOL_ID_STR, sizeof(_Message_t));
@@ -317,7 +317,7 @@ void ma_alcoholSensor_AdvertiseService
 //--------------------------------------------------------------------------------------------------
 
 
-static void Handle_ma_alcoholSensor_Read
+static void Handle_alcoholSensor_Read
 (
     le_msg_MessageRef_t _msgRef
 
@@ -350,7 +350,7 @@ static void Handle_ma_alcoholSensor_Read
 
     // Call the function
     le_result_t _result;
-    _result  = ma_alcoholSensor_Read ( 
+    _result  = alcoholSensor_Read ( 
         readingPtr );
 
     // Re-use the message buffer for the response
@@ -399,7 +399,7 @@ static void ServerMsgRecvHandler
     // Dispatch to appropriate message handler and get response
     switch (msgPtr->id)
     {
-        case _MSGID_ma_alcoholSensor_Read : Handle_ma_alcoholSensor_Read(msgRef); break;
+        case _MSGID_alcoholSensor_Read : Handle_alcoholSensor_Read(msgRef); break;
 
         default: LE_ERROR("Unknowm msg id = %i", msgPtr->id);
     }

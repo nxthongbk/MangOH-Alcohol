@@ -15,9 +15,9 @@ extern "C" {
 extern const char* _AlcoholSensorComponent_le_adc_ServiceInstanceName;
 const char** le_adc_ServiceInstanceNamePtr = &_AlcoholSensorComponent_le_adc_ServiceInstanceName;
 void le_adc_ConnectService(void);
-extern const char* _AlcoholSensorComponent_ma_alcoholSensor_ServiceInstanceName;
-const char** ma_alcoholSensor_ServiceInstanceNamePtr = &_AlcoholSensorComponent_ma_alcoholSensor_ServiceInstanceName;
-void ma_alcoholSensor_AdvertiseService(void);
+extern const char* _AlcoholSensorComponent_alcoholSensor_ServiceInstanceName;
+const char** alcoholSensor_ServiceInstanceNamePtr = &_AlcoholSensorComponent_alcoholSensor_ServiceInstanceName;
+void alcoholSensor_AdvertiseService(void);
 // Component log session variables.
 le_log_SessionRef_t AlcoholSensorComponent_LogSession;
 le_log_Level_t* AlcoholSensorComponent_LogLevelFilterPtr;
@@ -32,7 +32,7 @@ __attribute__((constructor)) void _AlcoholSensorComponent_Init(void)
     LE_DEBUG("Initializing AlcoholSensorComponent component library.");
 
     // Advertise server-side IPC interfaces.
-    ma_alcoholSensor_AdvertiseService();
+    alcoholSensor_AdvertiseService();
 
     // Connect client-side IPC interfaces.
     le_adc_ConnectService();

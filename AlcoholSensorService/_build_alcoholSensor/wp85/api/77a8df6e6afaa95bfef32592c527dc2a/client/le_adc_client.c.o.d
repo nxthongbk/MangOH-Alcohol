@@ -1,6 +1,6 @@
-/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c.o: \
- /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c \
- /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_interface.h \
+/home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c.o: \
+ /home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_client.c \
+ /home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_interface.h \
  /home/nxthong/MangOH/workspace/legato/framework/include/legato.h \
  /home/nxthong/MangOH/workspace/legato/build/wp85/framework/include/le_config.h \
  /home/nxthong/MangOH/workspace/legato/framework/include/le_basics.h \
@@ -35,4 +35,4 @@
  /home/nxthong/MangOH/workspace/legato/framework/include/le_fs.h \
  /home/nxthong/MangOH/workspace/legato/framework/include/le_rand.h \
  /home/nxthong/MangOH/workspace/legato/framework/include/le_base64.h \
- /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_messages.h
+ /home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/api/77a8df6e6afaa95bfef32592c527dc2a/client/le_adc_messages.h

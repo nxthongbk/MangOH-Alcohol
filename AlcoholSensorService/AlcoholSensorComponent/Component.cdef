@@ -1,20 +1,20 @@
 sources:
 {
-	alcoholSensor.c
+    alcoholSensor.c
 }
 
 requires:
 {
-	api:
-	{
-		modemServices/le_adc.api
-	}
+    api:
+    {
+        modemServices/le_adc.api
+    }
 }
 
 provides:
 {
-	api:
-	{
-		ma_alcoholSensor.api
-	}
+    api:
+    {
+        alcoholSensor.api
+    }
 }

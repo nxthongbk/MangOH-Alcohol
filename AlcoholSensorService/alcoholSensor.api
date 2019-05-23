@@ -4,13 +4,13 @@
  *
  * The following function can be used to fetch alcohol measurement:
  *
- * - ma_alcoholSensor_Read()
+ * - alcoholSensor_Read()
  *
  * <hr>
  *
  * Copyright (C) Sierra Wireless Inc.
  *
- * @file ma_alcoholSensor.api
+ * @file alcoholSensor.api
  */
 //--------------------------------------------------------------------------------------------------
 
@@ -20,8 +20,8 @@
  *
  * @return LE_OK if successful.
  */
-//-------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 FUNCTION le_result_t Read
 (
-	double reading OUT ///< Where the alcohol reading (ppm) will be put if LE_OK is returned.
+    double reading OUT //.
 );

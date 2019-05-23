@@ -8,8 +8,8 @@
  */
 
 
-#ifndef MA_ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD
-#define MA_ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD
+#ifndef ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD
+#define ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD
 
 
 #include "legato.h"
@@ -17,10 +17,10 @@
 #define PROTOCOL_ID_STR "92c3cd37d7f8927125b83c81b3f7f27e"
 
 #ifdef MK_TOOLS_BUILD
-    extern const char** ma_alcoholSensor_ServiceInstanceNamePtr;
-    #define SERVICE_INSTANCE_NAME (*ma_alcoholSensor_ServiceInstanceNamePtr)
+    extern const char** alcoholSensor_ServiceInstanceNamePtr;
+    #define SERVICE_INSTANCE_NAME (*alcoholSensor_ServiceInstanceNamePtr)
 #else
-    #define SERVICE_INSTANCE_NAME "ma_alcoholSensor"
+    #define SERVICE_INSTANCE_NAME "alcoholSensor"
 #endif
 
 
@@ -34,7 +34,7 @@ typedef struct __attribute__((packed))
 }
 _Message_t;
 
-#define _MSGID_ma_alcoholSensor_Read 0
+#define _MSGID_alcoholSensor_Read 0
 
 
 // Define type-safe pack/unpack functions for all enums, including included types
@@ -42,4 +42,4 @@ _Message_t;
 // Define pack/unpack functions for all structures, including included types
 
 
-#endif // MA_ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD
+#endif // ALCOHOLSENSOR_MESSAGES_H_INCLUDE_GUARD

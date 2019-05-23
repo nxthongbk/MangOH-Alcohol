@@ -1,33 +1,33 @@
 executables:
 {
-	alcoholSensor = ( AlcoholSensorComponent)
+    alcoholSensor = ( AlcoholSensorComponent)
 }
 
 processes:
 {
-	envVars:
-	{
-		LE_LOG_LEVEL = DEBUG
-	}
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
 
-	run:
-	{
-		( alcoholSensor )
-	}
+    run:
+    {
+        ( alcoholSensor )
+    }
 
-	maxCoreDumpFileBytes: 512K
-	maxFileBytes: 512K
+    maxCoreDumpFileBytes: 512K
+    maxFileBytes: 512K
 }
 
 
 extern:
 {
-	alcoholSensor.AlcoholSensorComponent.ma_alcoholSensor
+    alcoholSensor.AlcoholSensorComponent.alcoholSensor
 }
 
 bindings:
 {
-	alcoholSensor.AlcoholSensorComponent.le_adc -> modemService.le_adc
+    alcoholSensor.AlcoholSensorComponent.le_adc -> modemService.le_adc
 }
 
 version: 1.0.0

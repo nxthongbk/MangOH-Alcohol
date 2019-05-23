@@ -1,5 +1,5 @@
-/home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/component/12beabfd22f1e2167dcbaefb86f4cd51/obj/_componentMain.c.o: \
- /home/nxthong/MangOH/mangOH/apps/AlcoholSensorService/_build_alcoholSensor/wp85/component/12beabfd22f1e2167dcbaefb86f4cd51/src/_componentMain.c \
+/home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/component/8c8aa56d57037ef3be3c60d5f0d35ffa/obj/_componentMain.c.o: \
+ /home/nxthong/GIT/MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor/wp85/component/8c8aa56d57037ef3be3c60d5f0d35ffa/src/_componentMain.c \
  /home/nxthong/MangOH/workspace/legato/framework/include/legato.h \
  /home/nxthong/MangOH/workspace/legato/build/wp85/framework/include/le_config.h \
  /home/nxthong/MangOH/workspace/legato/framework/include/le_basics.h \

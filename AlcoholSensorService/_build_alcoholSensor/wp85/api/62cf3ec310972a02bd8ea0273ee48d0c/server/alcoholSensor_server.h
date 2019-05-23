@@ -10,8 +10,8 @@
  */
 
 
-#ifndef MA_ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
-#define MA_ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
+#ifndef ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
+#define ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
 
 
 #include "legato.h"
@@ -22,7 +22,7 @@
  * Get the server service reference
  */
 //--------------------------------------------------------------------------------------------------
-le_msg_ServiceRef_t ma_alcoholSensor_GetServiceRef
+le_msg_ServiceRef_t alcoholSensor_GetServiceRef
 (
     void
 );
@@ -32,7 +32,7 @@ le_msg_ServiceRef_t ma_alcoholSensor_GetServiceRef
  * Get the client session reference for the current message
  */
 //--------------------------------------------------------------------------------------------------
-le_msg_SessionRef_t ma_alcoholSensor_GetClientSessionRef
+le_msg_SessionRef_t alcoholSensor_GetClientSessionRef
 (
     void
 );
@@ -42,7 +42,7 @@ le_msg_SessionRef_t ma_alcoholSensor_GetClientSessionRef
  * Initialize the server and advertise the service.
  */
 //--------------------------------------------------------------------------------------------------
-void ma_alcoholSensor_AdvertiseService
+void alcoholSensor_AdvertiseService
 (
     void
 );
@@ -56,11 +56,11 @@ void ma_alcoholSensor_AdvertiseService
  * @return LE_OK if successful.
  */
 //--------------------------------------------------------------------------------------------------
-le_result_t ma_alcoholSensor_Read
+le_result_t alcoholSensor_Read
 (
     double* readingPtr
-        ///< [OUT] Where the gas reading (kOhm) will be put if LE_OK is returned.
+        ///< [OUT]
 );
 
 
-#endif // MA_ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
+#endif // ALCOHOLSENSOR_INTERFACE_H_INCLUDE_GUARD
