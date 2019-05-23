@@ -1,20 +1,24 @@
 1. Please don't check-in build artifacts: MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor or update files  		  
-	```[Thong] Updated  
-	```
+```
+[Thong] Updated
+```
 
 2. Please provide comments in most areas, otherwise, most developers won't understand.  
-	```[Thong] Updated```
+```
+[Thong] Updated
+```
 
 3. ma_alcoholSensor.api:  
 	(a) You don't need "ma_alcoholSensor.api" filename, think "alcoholSensor.api"  
 	(b) Line 19: "kiloPascals"?  
 	(c) Line 27: "-"'s should line up till column 100  
-	
-	[Thong]   
+
+```
+[Thong]
 	(a) Renamed ma_alcoholSensor.api to alcoholSensor.api.  
 	(b) Updated to times  
-	(c) udpated.  
-
+	(c) udpated.
+```
 4. alcoholSensor.c: 
 	(a) Please remove tabs - https://docs.legato.io/latest/ccodingStdsFormat.html#codingTabs  
 	(b) Line 20 - 21 - please provide comments on this, even the seeedstudio example code at http://wiki.seeedstudio.com/Grove-Alcohol_Sensor/ has some, though the code there is also very poorly commented, please do better. Also, why do we need sensor_volt variable and lines 20 & 21 - can't all the math be done in one line? What does "omit *R16" mean?  
