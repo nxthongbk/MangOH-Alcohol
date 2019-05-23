@@ -7,7 +7,7 @@ requires:
 	api:
 	{
 		$LEGATO_ROOT/apps/sample/dataHub/io.api
-		ma_alcoholSensor = $CURDIR/../../AlcoholSensorService/ma_alcoholSensor.api
+		alcoholSensor = $CURDIR/../../AlcoholSensorService/alcoholSensor.api
 	}
 }
 

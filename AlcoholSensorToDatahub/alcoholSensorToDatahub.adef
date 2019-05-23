@@ -14,5 +14,5 @@ processes:
 bindings:
 {
 	alcoholSensorToDatahub.AlcoholSensorToDatahubComponent.io -> dataHub.io
-	alcoholSensorToDatahub.AlcoholSensorToDatahubComponent.ma_alcoholSensor -> alcoholSensor.ma_alcoholSensor
+	alcoholSensorToDatahub.AlcoholSensorToDatahubComponent.alcoholSensor -> alcoholSensor.alcoholSensor
 }
