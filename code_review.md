@@ -3,6 +3,7 @@ Please update your code to follow the Legato Coding standards:
 
 1. Please don't check-in build artifacts: MangOH-Alcohol/AlcoholSensorService/_build_alcoholSensor or
                                           update files  
+					  
 [Thong] Updated
 2. Please provide comments in most areas, otherwise, most developers won't understand.  
 [Thong] Updated
@@ -11,6 +12,7 @@ Please update your code to follow the Legato Coding standards:
 	(a) You don't need "ma_alcoholSensor.api" filename, think "alcoholSensor.api"  
 	(b) Line 19: "kiloPascals"?  
 	(c) Line 27: "-"'s should line up till column 100  
+	
 [Thong] 
 (a) Renamed ma_alcoholSensor.api to alcoholSensor.api.  
 (b) Updated to times  
@@ -35,6 +37,7 @@ Please update your code to follow the Legato Coding standards:
         YellowSensorToCloud/components/sensors/environment/environmentSensor.c  
       (a) line 133 - unsure of units of "degrees" - is this not supposed to be a ppm?  
       (b) line 148 - don't comment "set period to 1s" anf then set it to 10 sec.  
+      
  [Thong]  
  (a)  
  (b)  
@@ -44,7 +47,8 @@ Please update your code to follow the Legato Coding standards:
       I think you need for the observation you have created, please comment on the use case here.  
     (a) We are in Nix land <CR><NL> is the standard file format in Nix land, the file is in dos format.  
     (b) I first thought alcoholSensorDisplay.c was to send the alcohol sensor reading to an LED display.  
-        Confusing?
+        Confusing?  
+	
 [Thong]  
 (a) Yes we need to control by cloud. admin interface is just use to demo how to control notification.  
 
