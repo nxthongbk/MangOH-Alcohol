@@ -40,6 +40,10 @@ There are 3 legato applications:
 1. Build the AlcoholSensorDisplay app by running ```mkapp -t wp85 AlcoholSensorDisplay.adef``` in AlcoholSensorDisplay directory.
 1. Run ```instapp AlcoholSensorDisplay.wp85.update 192.168.2.2``` to install the app.
 
-## How to get get the concentration of gas
+## How to get get the concentration of gas.
+The concentration of gas is calulated by ratio: ```RS_gas/RS_air```.
+- ```RA_air``` is value of sensor returned in clean air.
+- ```RS_gas``` is value of sensor returned in alcohol.
+
 <img src="https://user-images.githubusercontent.com/17214533/58239849-0e3bf700-7d74-11e9-9657-35f5769a79ab.png" width="350" alt="accessibility text"> 
 1. According to the figure, we can see that the minimum concentration we can test is 20ppm and the maximum is 10000ppm, in a other word, we can get a concentration of gas between 0.002% and 1%. However, we can't provide a formula because the relation between ratio and concentration is nonlinear.
