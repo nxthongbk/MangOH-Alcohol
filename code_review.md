@@ -30,7 +30,8 @@
 (c)  
 ```
 
-5. alcoholSensorToDatahub.c - Please review all the api routines provided by a component before coding it. This should be using the periodic sensor as most most of the code will dissappear from alcoholSensorToDatahub.c, i.e.: psensor_Create - e.g. code in YellowSensorToCloud/components/sensors/environment/environmentSensor.c  
+5. alcoholSensorToDatahub.c:  
+Please review all the api routines provided by a component before coding it. This should be using the periodic sensor as most most of the code will dissappear from alcoholSensorToDatahub.c, i.e.: psensor_Create - e.g. code in YellowSensorToCloud/components/sensors/environment/environmentSensor.c  
       (a) line 133 - unsure of units of "degrees" - is this not supposed to be a ppm?  
       (b) line 148 - don't comment "set period to 1s" anf then set it to 10 sec.  
       
@@ -41,7 +42,7 @@
 ```
 	
 6. alcoholSensorDisplay.c  
--  I also think the datahub design assumes that Legato app code shouldn't be using the admin interface - this is more for the cloud control of Legato apps. I think you need for the observation you have created, please comment on the use case here.  
+I also think the datahub design assumes that Legato app code shouldn't be using the admin interface - this is more for the cloud control of Legato apps. I think you need for the observation you have created, please comment on the use case here.  
     	(a) We are in Nix land <CR><NL> is the standard file format in Nix land, the file is in dos format.  
     	(b) I first thought alcoholSensorDisplay.c was to send the alcohol sensor reading to an LED display.  
         Confusing?  
